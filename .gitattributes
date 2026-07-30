@@ -1,0 +1,9 @@
+.github/ export-ignore
+doc/ export-ignore
+samples-doc/ export-ignore
+tests/ export-ignore
+vendor/ export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+composer.lock export-ignore
+tox.ini export-ignore
