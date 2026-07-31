@@ -1,0 +1,31 @@
+{
+  "name": "opentelekomcloud-community/otc-functiongraph-php-runtime",
+  "homepage": "https://opentelekomcloud-community.github.io/otc-functiongraph-php-runtime",
+  "description": "T Cloud Public FunctionGraph Runtime library",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "T Cloud Public - Community",
+      "homepage": "https://community.open-telekom-cloud.com/"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/opentelekomcloud-community/otc-functiongraph-php-runtime/issues"
+  },
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "OTC\\fg_apig_event\\": "fg-events/fg-apig-event/src/",
+      "OTC\\fg_cts_event\\": "fg-events/fg-cts-event/src/",
+      "OTC\\fg_dds_event\\": "fg-events/fg-dds-event/src/",
+      "OTC\\fg_dms4kafka_event\\": "fg-events/fg-dms4kafka-event/src/",
+      "OTC\\fg_dms4rocketmq_event\\": "fg-events/fg-dms4rocketmq-event/src/",
+      "OTC\\fg_kafkaopensource_event\\": "fg-events/fg-kafkaopensource-event/src/",
+      "OTC\\fg_lts_event\\": "fg-events/fg-lts-event/src/",
+      "OTC\\fg_obss3_event\\": "fg-events/fg-obss3-event/src/",
+      "OTC\\fg_smn_event\\": "fg-events/fg-smn-event/src/",
+      "OTC\\fg_timer_event\\": "fg-events/fg-timer-event/src/"
+    }
+  }
+}

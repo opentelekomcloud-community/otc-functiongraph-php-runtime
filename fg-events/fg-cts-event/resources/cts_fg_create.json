@@ -1,0 +1,34 @@
+{
+  "cts": {
+    "api_version": "",
+    "code": 0,
+    "domain_id": "e51dfca1c18747919f6c16af2721f35d",
+    "message": "POST /v2/d52e41d2434941b194ce3f91b1b12f8a/fgs/functions, create function[test4]",
+    "operation_id": "CreateFunction",
+    "project_id": "d52e41d2434941b194ce3f91b1b12f8a",
+    "read_only": false,
+    "record_time": 1765788999507,
+    "request": {},
+    "resource_account_id": "",
+    "resource_id": "test4",
+    "resource_name": "test4",
+    "resource_type": "Functions",
+    "response": {},
+    "service_type": "FunctionGraph",
+    "source_ip": "62.156.151.4",
+    "time": 1765788999507,
+    "trace_id": "f828ab77-d993-11f0-b09f-35adcfa25f3b",
+    "trace_name": "createFunction",
+    "trace_rating": "normal",
+    "trace_status": "normal",
+    "trace_type": "ConsoleAction",
+    "user": {
+      "domain": {
+        "name": "OTC00000000001000100974",
+        "id": "e51dfca1c18747919f6c16af2721f35d"
+      },
+      "name": "user",
+      "id": "e14aed517380466cac2d109877a5ac6b"
+    }
+  }
+}

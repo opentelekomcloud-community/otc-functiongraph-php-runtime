@@ -1,0 +1,27 @@
+{
+  "name": "opentelekomcloud-community/fg-scratch-event-dds",
+  "type": "project",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../..",
+      "options": {
+        "symlink": false
+      }
+    }
+  ],
+  "require": {
+    "opentelekomcloud-community/otc-functiongraph-php-runtime": "*"
+  },
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "resources/**",
+      "vendor/opentelekomcloud-community",
+      "!vendor/opentelekomcloud-community/otc-functiongraph-php-runtime/fg-events/fg-dds-event/src"
+    ]
+  },
+  "config": {
+    "archive-format": "zip"
+  }
+}

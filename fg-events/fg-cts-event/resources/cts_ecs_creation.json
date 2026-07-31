@@ -1,0 +1,72 @@
+{
+  "time": "2016/12/08 11:07:28 GMT+08:00",
+  "user": {
+    "name": "aaa/op_service",
+    "id": "f2fe9fac63414a35a7d03108d5f1ea73",
+    "domain": {
+      "name": "aaa",
+      "id": "1f9b9ba51f6b4061bd5c1736b28469f8"
+    }
+  },
+  "request": {
+    "server": {
+      "name": "as-config-15f1_XWO68TFC",
+      "imageRef": "b2b2c7dc-bbb0-4d6b-81dd-f0904023d54f",
+      "flavorRef": "m1.tiny",
+      "personality": [],
+      "vpcid": "e4c374b9-3675-482c-9b81-4acd59745c2b",
+      "nics": [
+        {
+          "subnet_id": "fff89132-88d4-4e5b-9e27-d9001167d24f",
+          "nictype": null,
+          "ip_address": null,
+          "binding:profile": null,
+          "extra_dhcp_opts": null
+        }
+      ],
+      "adminPass": "********",
+      "count": 1,
+      "metadata": {
+        "op_svc_userid": "26e96eda18034ae9a44130bacb967b96"
+      },
+      "availability_zone": "az1.dc1",
+      "root_volume": {
+        "volumetype": "SATA",
+        "extendparam": {
+          "resourceSpecCode": "SATA"
+        },
+        "size": 40
+      },
+      "data_volumes": [],
+      "security_groups": [
+        {
+          "id": "dd597fd7-d119-4994-a22c-891fcfc54be1"
+        }
+      ],
+      "key_name": "KeyPair-3e51"
+    }
+  },
+  "response": {
+    "status": "SUCCESS",
+    "entities": {
+      "server_id": "42d39b4a-19b7-4ee2-b01b-a9f1353b4c54"
+    },
+    "job_id": "4010b39d58b855980158b8574b270018",
+    "job_type": "createSingleServer",
+    "begin_time": "2016-12-01T03:04:38.437Z",
+    "end_time": "2016-12-01T03:07:26.871Z",
+    "error_code": null,
+    "fail_reason": null
+  },
+  "service_type": "ECS",
+  "resource_type": "ecs",
+  "resource_name": "as-config-15f1_XWO68TFC",
+  "resource_id": "42d39b4a-19b7-4ee2-b01b-a9f1353b4c54",
+  "source_ip": "",
+  "trace_name": "createSingleServer",
+  "trace_rating": "normal",
+  "trace_type": "SystemAction",
+  "api_version": "1.0",
+  "record_time": "2016/12/08 11:07:28 GMT+08:00",
+  "trace_id": "4abc3a67-b773-11e6-8412-8f0ed3cc97c6"
+}

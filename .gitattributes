@@ -7,3 +7,4 @@ vendor/ export-ignore
 .gitignore export-ignore
 composer.lock export-ignore
 tox.ini export-ignore
+.tox/ export-ignore

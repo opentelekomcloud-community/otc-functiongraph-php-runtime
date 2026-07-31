@@ -1,0 +1,19 @@
+{
+    "event_version": "v1.0",
+    "event_time": 1714040037,
+    "trigger_type": "ROCKETMQ",
+    "region": "region",
+    "instance_id": "4140112c-85fc-40b8-bf7f-1ced2691a0a6",
+    "records": [
+        {
+            "messages": [
+                "rocketmq message1",
+                "rocketmq message2",
+                "rocketmq message3",
+                "rocketmq message4",
+                "rocketmq message5"
+            ],
+            "topic_id": "topic"
+        }
+    ]
+}
