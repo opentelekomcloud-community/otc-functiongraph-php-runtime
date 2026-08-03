@@ -1,0 +1,15 @@
+{
+  "require": {
+    "flightphp/core": "^3.18"
+  },
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "terraform",
+      "resources"
+    ]
+  },
+  "config": {
+    "archive-format": "zip"
+  }
+}

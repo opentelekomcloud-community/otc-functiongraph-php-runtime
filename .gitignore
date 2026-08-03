@@ -3,3 +3,5 @@ composer.lock
 .tox
 build/
 *.zip
+.terraform
+.terraform*
