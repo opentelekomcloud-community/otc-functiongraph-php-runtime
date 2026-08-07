@@ -13,7 +13,7 @@
   "support": {
     "issues": "https://github.com/opentelekomcloud-community/otc-functiongraph-php-runtime/issues"
   },
-  "version": "1.0.0",
+  "version": "dev-main",
   "autoload": {
     "psr-4": {
       "OTC\\fg_apig_event\\": "fg-events/fg-apig-event/src/",
@@ -27,5 +27,10 @@
       "OTC\\fg_smn_event\\": "fg-events/fg-smn-event/src/",
       "OTC\\fg_timer_event\\": "fg-events/fg-timer-event/src/"
     }
-  }
+  },
+  "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
+    }
 }

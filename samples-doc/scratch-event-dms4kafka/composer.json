@@ -1,17 +1,10 @@
 {
   "name": "opentelekomcloud-community/fg-scratch-event-dms4kafka",
   "type": "project",
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../..",
-      "options": {
-        "symlink": false
-      }
-    }
-  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
-    "opentelekomcloud-community/otc-functiongraph-php-runtime": "*"
+    "opentelekomcloud-community/otc-functiongraph-php-runtime": "^1.0"
   },
   "archive": {
     "exclude": [

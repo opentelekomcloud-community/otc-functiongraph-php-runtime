@@ -1,0 +1,21 @@
+# URL rewriting
+# All incoming requests are funnelled through index.php — the front controller —
+# unless the requested path is an actual file (!-f) or directory (!-d) on disk. 
+# This is the standard setup for PHP frameworks like Flight so they can dispatch routes themselves.
+# - QSA — appends the original query string to the rewritten URL
+# - L — stops processing further rules after this one matches
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+
+# GZIP compression (lines 6–10)
+# If Apache's mod_deflate module is loaded, it compresses text-based responses
+# before sending them to the client, reducing transfer size.
+# Covers HTML, CSS, plain text, XML, and JavaScript.
+# BEGIN GZIP
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
+# END GZIP
