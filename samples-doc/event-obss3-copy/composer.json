@@ -1,0 +1,25 @@
+{
+  "name": "opentelekomcloud-community/event-obss3-copy",
+  "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "opentelekomcloud-community/otc-functiongraph-php-runtime": "^1.0",
+    "obs/esdk-obs-php": "^3.0"
+
+  },
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "resources/**",
+      "terraform/",
+      "resources/**",
+      "vendor/opentelekomcloud-community",
+      "!vendor/opentelekomcloud-community/otc-functiongraph-php-runtime/fg-events/fg-obss3-event/src"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "optimize-autoloader": true
+  }
+}
