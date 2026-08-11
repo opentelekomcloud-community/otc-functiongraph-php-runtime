@@ -1,0 +1,23 @@
+{
+  "name": "opentelekomcloud-community/event-sdk-ecs",
+  "description": "Sample for a FunctionGraph function to start an ECS instance",
+  "license": "Apache-2.0",
+  "type": "project",
+
+  "require": {
+    "opentelekomcloud-community/otc-functiongraph-php-runtime": "^1.0",
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.2",
+    "ext-curl": "*"    
+  },  
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "resources/**",
+      "terraform/"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "optimize-autoloader": true
+  }
+}

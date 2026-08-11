@@ -1,6 +1,6 @@
 # Terraform backend configuration
 BACKEND_CONFIG_BUCKET := "doc-samples-tf-backend"
-BACKEND_CONFIG_KEY := "terraform_state/php/scratch-event-timer.tf"
+BACKEND_CONFIG_KEY := "terraform_state/php/event-sdk-ecs.tf"
 BACKEND_CONFIG_REGION := "eu-de"
 BACKEND_CONFIG_ENDPOINTS := "endpoints={s3=\"https://obs.eu-de.otc.t-systems.com\"}"
 
@@ -16,7 +16,7 @@ IAC_TOOL := terraform
 # based on composer.json archive settings
 create_package:
 	composer update
-	composer archive --format=zip --file=code.zip
+	composer archive --format=zip --file=code
 
 tf_init:
 	$(IAC_TOOL) -chdir=terraform \
@@ -49,19 +49,5 @@ tf_destroy:
 
 #####################################################################
 
-test_deployed:
-  # getting Token for authentication from Username/Password...
-	$(eval OTC_X_AUTH_TOKEN := $(shell ../../utils/tokenFromUsername.sh))
-	# getting the Function URN from terraform output...
-	$(eval MY_FUNCTION_URN := $(shell terraform -chdir=terraform output -raw MY_FUNCTION_URN))
-	# calling the deployed function via FunctionGraph API...
-	@curl -X POST \
-	 -H "Content-Type: application/json" \
-	 -H "x-auth-token: $(OTC_X_AUTH_TOKEN)" \
-	 -d @./resources/test_event.json \
-	 https://functiongraph.$(OTC_SDK_REGION).otc.t-systems.com/v2/$(OTC_SDK_PROJECTID)/fgs/functions/$(MY_FUNCTION_URN):latest/invocations
-	@echo "" 
-	# finished
 
-
-.PHONY: create_package tf_init tf_plan tf_apply tf_destroy test_deployed
+.PHONY: create_package tf_init tf_plan tf_apply tf_destroy

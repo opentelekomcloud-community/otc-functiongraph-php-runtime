@@ -13,7 +13,6 @@
       "Makefile",
       "resources/**",
       "terraform/",
-      "resources/**",
       "vendor/opentelekomcloud-community",
       "!vendor/opentelekomcloud-community/otc-functiongraph-php-runtime/fg-events/fg-obss3-event/src"
     ]
