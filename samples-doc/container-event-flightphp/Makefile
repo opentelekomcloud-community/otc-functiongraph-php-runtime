@@ -2,7 +2,7 @@ SHELL:=/bin/bash
 TARGET_PATH=target
 DOCKER_FILE=Dockerfile
 
-IMAGE_NAME=custom_container_event_flighthttp_php
+IMAGE_NAME=custom_container_event_flightphp_php
 
 docker_build: 
 	docker buildx build \
@@ -38,7 +38,7 @@ test_local:
   # execute a curl 
 	curl -X POST \
 	-H "X-Cff-Request-Id: $(shell uuidgen)" \
-	-H "X-Cff-Func-Name: 0@default@sample-container-event-flighthttp" \
+	-H "X-Cff-Func-Name: 0@default@sample-container-event-flightphp" \
 	-H "X-Cff-Func-Version: latest" \
 	-H "X-Cff-Func-Timeout: 30" \
 	-H "X-Cff-region: eu_de" \

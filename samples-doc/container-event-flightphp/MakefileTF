@@ -5,7 +5,7 @@ include ./Makefile
 
 # Terraform backend configuration
 BACKEND_CONFIG_BUCKET := "doc-samples-tf-backend"
-BACKEND_CONFIG_KEY := "terraform_state/php/container-event-flighthttp.tf"
+BACKEND_CONFIG_KEY := "terraform_state/php/container-event-flightphp.tf"
 BACKEND_CONFIG_REGION := "eu-de"
 BACKEND_CONFIG_ENDPOINTS := "endpoints={s3=\"https://obs.eu-de.otc.t-systems.com\"}"
 

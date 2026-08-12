@@ -1,5 +1,5 @@
 {
-  "name": "opentelekomcloud-community/otc-functiongraph-php-runtime-samples-doc-container-event-flighthttp",
+  "name": "opentelekomcloud-community/otc-functiongraph-php-runtime-samples-doc-container-event-flightphp",
   "description": "Sample code for FunctionGraph container event function with FlightPHP framework",
   "type": "project",
   "license": "Apache-2.0",
@@ -22,6 +22,12 @@
     "archive-format": "zip",
      "process-timeout": 0,
      "sort-packages": true
+  },
+
+  "autoload": {
+    "psr-4": {
+      "app\\": "src/app/"
+    }
   },
 
   "scripts": {

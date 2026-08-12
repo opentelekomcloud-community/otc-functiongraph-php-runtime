@@ -5,7 +5,7 @@ use Monolog\Formatter\LineFormatter;
 use app\processors\RequestHeaderProcessor;
 
 // register a logger service
-$app->register('log', Monolog\Logger::class, ['flighthttp'], function($log) {
+$app->register('log', Monolog\Logger::class, ['flightphp'], function($log) {
     
     $dateFormat = "Y-m-d\TH:i:s.v\Z";
     

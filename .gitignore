@@ -6,3 +6,4 @@ build/
 .terraform
 .terraform*
 utils/
+tox.ini
