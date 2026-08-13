@@ -1,0 +1,20 @@
+{
+  "name": "opentelekomcloud-community/dependency-api-sign-sdk-php",
+  "description": "FunctionGraph dependency API sign SDK for PHP",
+  "type": "library",
+  "license": "Apache-2.0",
+  "require": {
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "^1.0"
+  },
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "terraform",
+      "resources"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "sort-packages": true
+  }
+}

@@ -16,7 +16,7 @@ IAC_TOOL := terraform
 # based on composer.json archive settings
 create_package:
 	composer update
-	composer archive --format=zip --file=code.zip
+	composer archive --format=zip --file=code
 
 tf_init:
 	$(IAC_TOOL) -chdir=terraform \

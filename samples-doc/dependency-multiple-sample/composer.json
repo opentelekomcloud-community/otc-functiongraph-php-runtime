@@ -1,0 +1,26 @@
+{
+  "name": "opentelekomcloud-community/dependency-multiple-sample-php",
+  "description": "FunctionGraph dependency multiple sample for PHP",
+  "type": "library",
+  "license": "Apache-2.0",
+  "require": {
+    "brick/date-time": "^0.9.0",
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "^1.0",
+    "opentelekomcloud-community/otc-functiongraph-php-runtime": "^1.0"
+  },
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "terraform",
+      "resources",
+      "!dependencies",
+      "dependencies/opentelekomcloud-community"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "sort-packages": true,
+    "vendor-dir": "dependencies"
+  }
+
+}

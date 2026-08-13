@@ -7,3 +7,4 @@ build/
 .terraform*
 utils/
 tox.ini
+dependencies/
