@@ -19,12 +19,14 @@ Steps needed:
 
 1. Adapt composer.json to use another folder to install package dependencies
    in **config** block:
+
    ```json
    "config": {
     "vendor-dir": "dependencies"
    }
    ```
-1. Exclude dependencies installed on FunctionGraph in **archive** block.
+
+2. Exclude dependencies installed on FunctionGraph in **archive** block but those of your project with ```!dependencies```:
   
    ```json
     "archive": {
@@ -39,23 +41,17 @@ Steps needed:
    ```
    In this example all `opentelekomcloud-community` dependencies are excluded.
 
-1. Use following command to include dependencies from project in your php file:
+3. Use following command to include dependencies from project in your php file:
    ```php
-     require_once __DIR__ . '/../dependencies/autoload.php';
+     require_once getenv('RUNTIME_CODE_ROOT') . '/dependencies/autoload.php';
    ```
 
-1. Use following code snipped to include dependencies from FunctionGraph:
-   ```php   
-   $path = __DIR__ . '/../vendor';
-   $dir      = new RecursiveDirectoryIterator($path);
-   $iterator = new RecursiveIteratorIterator($dir);
-   foreach ($iterator as $file) {
-      $fname = $file->getFilename();
-      if (preg_match('%\.php$%', $fname)
-        && strpos($file->getPathname(), '/composer/') === false
-        && strpos($file->getPathname(), '/autoload.php') === false
-      ) {
-            require_once $file->getPathname();
-      }
-   }
+4. Add [FGDependenciesLoader.php](./src/FGDependenciesLoader.php) to your project and use following code snipped to include dependencies from FunctionGraph:
+   ```php
+   // include FunctionGraph dependencies
+   include __DIR__.'/FGDependenciesLoader.php';
+   $loader = new \FGDependenciesLoader\FGDependenciesLoader();   
    ```
+
+As sample see: [index.php](./src/index.php)
+

@@ -11,23 +11,11 @@
 // #############################################################################
 
 // include project dependencies
-require_once __DIR__ . '/../dependencies/autoload.php';
+require_once getenv('RUNTIME_CODE_ROOT') . '/dependencies/autoload.php';
 
-
-// include all PHP files in vendor directory of FunctionGraph
-// except composer and autoload.php
-$path = __DIR__ . '/../vendor';
-$dir      = new RecursiveDirectoryIterator($path);
-$iterator = new RecursiveIteratorIterator($dir);
-foreach ($iterator as $file) {
-    $fname = $file->getFilename();
-  if (preg_match('%\.php$%', $fname)
-    && strpos($file->getPathname(), '/composer/') === false
-    && strpos($file->getPathname(), '/autoload.php') === false
-  ) {
-        require_once $file->getPathname();
-    }
-}
+// include FunctionGraph dependencies
+include __DIR__.'/FGDependenciesLoader.php';
+$loader = new \FGDependenciesLoader\FGDependenciesLoader();
 
 use OTC\Signer;
 use OTC\Request;
@@ -39,11 +27,15 @@ use Brick\DateTime\TimeZone;
 
 function handler($event, $context)
 {
+
+  global $loader;
   $logger = $context->getLogger();
 
   $timerEvent = new TimerEvent($event);
   $timerName = $timerEvent->getTriggerName();
   $userEvent = $timerEvent->getUserEvent();
+
+  $logger->info("Loaded FG dependencies:\n" . implode("\n", $loader->getLoaded()));
 
   // get project_id and instance_id from environment variables
   $projectId = getenv('RUNTIME_PROJECT_ID');
