@@ -1,0 +1,16 @@
+{
+  "name": "opentelekomcloud-community/scratch-http",
+  "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "resources/"
+    ]
+  },
+  "config": {
+    "archive-format": "zip"
+  }
+}

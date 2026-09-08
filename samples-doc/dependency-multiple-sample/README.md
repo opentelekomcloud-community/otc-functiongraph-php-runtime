@@ -6,18 +6,27 @@ Dependencies added to FunctionGraph function are unzipped in folder `$RUNTIME_CO
 
 Steps needed:
 
-1. Specify all needed dependencies in `composer.json` **require** block.
-   Here we will use **brick/date-time** as project dependency and 
-   **opentelekomcloud-community/*** dependencies are added to FunctionGraph:
+1. Specify all needed dependencies in `composer.json`:
+
+   Project dependencies are added in the **require** block:
+
    ```json
    "require": {
-      "brick/date-time": "^0.9.0",
+      "brick/date-time": "^0.9.0"
+    },
+   ``` 
+      
+   and dependencies added to FunctionGraph are added in the **require-dev** block:
+
+   ```json
+   "require-dev": {
       "opentelekomcloud-community/otc-api-sign-sdk-php": "^1.0",
       "opentelekomcloud-community/otc-functiongraph-php-runtime": "^1.0"
     },
    ``` 
+  
 
-1. Adapt composer.json to use another folder to install package dependencies
+2. Adapt composer.json to use another folder to install package dependencies
    in **config** block:
 
    ```json
@@ -26,27 +35,31 @@ Steps needed:
    }
    ```
 
-2. Exclude dependencies installed on FunctionGraph in **archive** block but those of your project with ```!dependencies```:
+3. Exclude files not needed in the deployment, like:
   
    ```json
     "archive": {
       "exclude": [
         "Makefile",
         "terraform",
-        "resources",
-        "!dependencies",
-        "dependencies/opentelekomcloud-community"
+        "resources"
       ]
     },
    ```
-   In this example all `opentelekomcloud-community` dependencies are excluded.
 
-3. Use following command to include dependencies from project in your php file:
+4. Create zip file using
+
+   ```bash
+   make create_package
+   ``` 
+
+
+5. Use following command to include dependencies from project in your php file:
    ```php
      require_once getenv('RUNTIME_CODE_ROOT') . '/dependencies/autoload.php';
    ```
 
-4. Add [FGDependenciesLoader.php](./src/FGDependenciesLoader.php) to your project and use following code snipped to include dependencies from FunctionGraph:
+6. Add [FGDependenciesLoader.php](./src/FGDependenciesLoader.php) to your project and use following code snipped to include dependencies from FunctionGraph:
    ```php
    // include FunctionGraph dependencies
    include __DIR__.'/FGDependenciesLoader.php';

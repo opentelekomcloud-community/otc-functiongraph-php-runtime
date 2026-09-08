@@ -247,8 +247,8 @@ extlinks= {
     "otc_fg_api": ("https://docs.otc.t-systems.com/function-graph/api-ref/%s", "%s"),
     "fg_console": ("https://console.otc.t-systems.com/functiongraph/%s", "%s"),
     "otc_developer": ("https://docs.otc.t-systems.com/developer/%s", "%s"),
-    "github_python_sign_sdk": (
-        "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-python/%s",
+    "github_php_sign_sdk": (
+        "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php/%s",
         "%s",
     ),
     "docs_otc": ("https://docs.otc.t-systems.com/%s", "%s"),

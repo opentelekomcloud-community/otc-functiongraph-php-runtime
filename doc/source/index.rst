@@ -4,15 +4,16 @@ FunctionGraph PHP documentation
 This is the **FunctionGraph PHP Development Guide** for running
 FunctionGraph.
 
-.. .. toctree::
-..    :maxdepth: 10
-..    :hidden:
+.. toctree::
+    :maxdepth: 10
+    :hidden:
 
-  ..  Building with Python <devguide/_index>
-  ..  Concepts <devguide/concepts/_index>
-  ..  Deployment <devguide/deployment/_index>
-  ..  Samples <samples/_index>
-  ..  Best Practices <devguide/bestpractices/_index>
+    Building with PHP <devguide/_index>
+    Concepts <devguide/concepts/_index>
+    
+..  Deployment <devguide/deployment/_index>
+..  Samples <samples/_index>
+..  Best Practices <devguide/bestpractices/_index>
 
 .. note::
 

@@ -1,0 +1,2 @@
+cd $RUNTIME_CODE_ROOT
+/opt/function/runtime/php8.3/rtsp/php/bin/php -S 0.0.0.0:8000 index.php

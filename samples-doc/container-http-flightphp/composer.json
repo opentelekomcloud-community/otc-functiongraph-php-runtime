@@ -1,0 +1,25 @@
+{
+  "name": "opentelekomcloud-community/otc-functiongraph-php-runtime-samples-doc-container-http-flightphp",
+  "description": "Sample code for FunctionGraph container http function with FlightPHP framework",
+  "type": "project",
+  "license": "Apache-2.0",
+  "require": {
+    "php": "^8.2",
+    "flightphp/core": "^3.18",
+    "monolog/monolog": "^3.10",
+    "ext-json": "*"
+  },
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "terraform",
+      "resources"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "process-timeout": 0,
+    "sort-packages": true
+  }
+  
+}
