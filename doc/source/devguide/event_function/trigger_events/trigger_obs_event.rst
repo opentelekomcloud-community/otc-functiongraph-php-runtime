@@ -172,20 +172,3 @@ Example
 
 Full sample code is available in the :github_repo_master:`samples-doc/scratch-event-obs`.
 
-Further reading
-----------------
-
-For working with OBS Buckets, please refer to:
-:docs_otc:`Object Storage Service 3rd Party - Python SDK <object-storage-service-3rd-party/python-sdk/>`.
-
-FunctionGraph Python Runtime contains a bundled version of OBS SDK,
-which is available in the runtime environment.
-
-See :ref:`Bundled Libraries <bundled_libraries>` for the specific Python version documentation for more details.
-
-
-For samples, see:
-
-* :ref:`Scratch Event Function copy images <event-obss3-copy>`.
-* :ref:`Scratch Event Function using OBS SDK <event-sdk-obs>`.
-

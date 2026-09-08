@@ -10,6 +10,7 @@ Building with PHP
    Event Function<event_function/_index>
    HTTP Function<http_function/_index>
    Invoke FunctionGraph <invoke/_index>
+   Bundled Libraries <bundled_libraries/_index>
 
 FunctionGraph Types
 -------------------
