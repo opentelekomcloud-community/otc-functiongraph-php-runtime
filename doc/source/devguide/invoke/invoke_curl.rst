@@ -102,7 +102,7 @@ in API reference for more details about asynchronous invocation.
 
 .. code-block:: bash
 
-   export MY_FUNCTION_NAME="python-sample-invoke-function"
+   export MY_FUNCTION_NAME="php-sample-invoke-function"
    export MY_FUNCTION_URN="urn:fss:${OTC_SDK_REGION}:${OTC_SDK_PROJECTID}:function:default:${MY_FUNCTION_NAME}:latest"
 
    # execute curl

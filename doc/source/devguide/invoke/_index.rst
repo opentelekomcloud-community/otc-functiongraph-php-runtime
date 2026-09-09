@@ -3,7 +3,7 @@ Invoking FunctionGraph Functions
 
 
 Following pages demonstrate how to call a FunctionGraph implemented in
-Python:
+PHP:
 
 .. toctree::
    :maxdepth: 1

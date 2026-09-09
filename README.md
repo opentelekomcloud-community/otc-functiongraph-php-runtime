@@ -2,9 +2,6 @@
 
 T Cloud Public FunctionGraph runtime libraries for PHP
 
-> [!IMPORTANT]
-> comming soon.... 
-
 ## Documentation
 
 For documentation see: [otc-functiongraph-php-runtime](https://opentelekomcloud-community.github.io/otc-functiongraph-php-runtime/)

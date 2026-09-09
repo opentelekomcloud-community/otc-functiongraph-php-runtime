@@ -9,15 +9,11 @@ FunctionGraph.
     :hidden:
 
     Building with PHP <devguide/_index>
-    Concepts <devguide/concepts/_index>
-    
-..  Deployment <devguide/deployment/_index>
+    Concepts <devguide/concepts/_index>    
+    Deployment <devguide/deployment/_index>
+    Best Practices <devguide/bestpractices/_index>
+
 ..  Samples <samples/_index>
-..  Best Practices <devguide/bestpractices/_index>
-
-.. note::
-
-  In development, comming soon ....
 
 
 Source Code

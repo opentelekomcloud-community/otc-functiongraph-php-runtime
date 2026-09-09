@@ -116,11 +116,17 @@ For POST event:
     {
       "body": "eyJtZXNzYWdlIjogIkhlbGxvLCBXb3JsZCEifQ==",
       "headers": {
-          "Date": [
-              "Fri, 03 Jul 2026 09:16:00 GMT"
+          "Content-Type": [
+              "text/html; charset=UTF-8"
           ],
-          "Server": [
-              "BaseHTTP/0.6 Python/3.10.0"
+          "Date": [
+              "Wed, 09 Sep 2026 10:27:22 GMT"
+          ],
+          "Host": [
+              "host"
+          ],
+          "X-Powered-By": [
+              "PHP/8.3.6"
           ]
       },
       "statusCode": 200,
@@ -140,16 +146,19 @@ For GET event:
    :caption: Execution Result GET
 
     {
-        "body": "eyJtZXNzYWdlIjogIkhlbGxvLCBKb2huISJ9",
+        "body": "eyJtZXNzYWdlIjoiSGVsbG8sIEpvaG4hIn0=",
         "headers": {
             "Content-Type": [
                 "application/json"
             ],
             "Date": [
-                "Fri, 03 Jul 2026 09:17:28 GMT"
+                "Wed, 09 Sep 2026 10:34:08 GMT"
             ],
-            "Server": [
-                "BaseHTTP/0.6 Python/3.10.0"
+            "Host": [
+                "host"
+            ],
+            "X-Powered-By": [
+                "PHP/8.3.6"
             ]
         },
         "statusCode": 200,

@@ -1,0 +1,20 @@
+{
+      "name": "opentelekomcloud-community/deploy-from-obs",
+      "description": "sample PHP project for FunctionGraph",
+      "type": "project",
+      "license": "Apache-2.0",
+      "require": {
+        "brick/date-time": "^0.9.0"
+      },
+      "archive": {
+        "exclude": [
+          "Makefile",
+          "resources",
+          "terraform"
+        ]
+      },
+      "config": {
+        "archive-format": "zip",
+        "sort-packages": true
+      }
+    }

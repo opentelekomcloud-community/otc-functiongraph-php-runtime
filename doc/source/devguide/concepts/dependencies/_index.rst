@@ -22,16 +22,17 @@ a dependency for easier management, sharing, and smaller deployment sizes.
 
 You can keep multiple versions of the same dependency for systematic management.
 
-Besides dependencies, FunctionGraph includes a number of bundled libraries included 
-in the runtime environment, which are available for use without the need for packaging
-them into a dependency.
-These bundled libraries are pre-installed and maintained by FunctionGraph, and they
+PHP extensions
+----------------
+
+FunctionGraph includes a number of bundled php extensions included 
+in the runtime environment.
+These extensions are pre-installed and maintained by FunctionGraph, and they
 provide commonly used functionalities that can be used directly in your function code.
 For more information, see :ref:`bundled_libraries`.
-If you want to use a different version of a runtime-included library,
-you can do this by bundling it with your function in your deployment package
-or by adding it as a dependency.
 
+You can not modify these bundled php extensions. If you need additional extensions,
+you must use container images to include the additional extensions.
 
 
 Notes and Constraints
