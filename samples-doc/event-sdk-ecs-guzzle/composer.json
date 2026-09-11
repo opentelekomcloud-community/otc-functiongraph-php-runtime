@@ -7,7 +7,7 @@
   "require": {
     "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.2",
     "opentelekomcloud-community/otc-functiongraph-php-runtime": "^1.0",
-    "guzzlehttp/guzzle": "^7.0"    
+    "guzzlehttp/guzzle": "^7.0"
     
   },  
   "archive": {

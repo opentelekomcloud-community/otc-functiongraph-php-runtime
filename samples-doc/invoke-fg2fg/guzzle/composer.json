@@ -1,0 +1,19 @@
+{
+  "name": "opentelekomcloud-community/invoke-fg2fg-guzzle",
+  "description": "Samples on how to invoke FunctionGraph from FunctionGraph functions using AK,SK and Guzzle",
+  "license": "Apache-2.0",
+  "type": "project",
+  "require": {
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.2",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+   "archive": {
+    "exclude": [
+      "Makefile"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "optimize-autoloader": true
+  }
+}

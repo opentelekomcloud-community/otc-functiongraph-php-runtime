@@ -101,12 +101,9 @@ You can access the value of **order_id** by using the following code:
 
   $order_id = $event["order_id"];  // Using bracket notation
   // or
-  $order_id = isset($event["order_id"]) ? $event["order_id"] : null;  // Using get method
-
-You can define the expected shape of the input event using type hints.
+  $order_id = $event->order_id;    // Using dot notation
 
 For example:
-
 
 .. code-block:: php
 
@@ -114,7 +111,8 @@ For example:
     function handler($event, $context) {
       $order_id = $event["order_id"];  // Using bracket notation
       // or
-      $order_id = isset($event["order_id"]) ? $event["order_id"] : null;  // Using get method
+      $order_id = $event->order_id;    // Using dot notation
+      
       $amount = $event["amount"];
       $item = $event["item"];
 
@@ -124,16 +122,10 @@ For example:
 
     }
 
-After you define the event parameter, FunctionGraph code completion
-will help you access the content of the event parameter.
-
-As alternative, you can also use predefined javascript objects to define the expected shape of the input event.
-
 For trigger events, the event parameter is predefined by FunctionGraph.
 
 You can refer to the following documentation for details about the predefined event parameters for different trigger events.
 See: :ref:`devguide_event_function_trigger_events_index` for details.
-
 
 Return value
 """""""""""""""""""""""""""

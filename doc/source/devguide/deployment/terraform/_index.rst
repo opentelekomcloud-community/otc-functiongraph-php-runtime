@@ -31,4 +31,4 @@ see following:
 For more complex deployment scenarios, see the "terraform" folder
 in the other sample files, e.g.:
 
-- Deploy FunctionGraph as container in: :github_repo_master:`container-event-express <samples-doc/container-event-express>`
+- Deploy FunctionGraph as container in: :github_repo_master:`container-event-flightphp <samples-doc/container-event-flightphp>`

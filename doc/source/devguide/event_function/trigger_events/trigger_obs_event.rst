@@ -170,5 +170,5 @@ Example
     :language: php
     :caption: :github_repo_master:`index.php <samples-doc/scratch-event-obss3/src/index.php>`
 
-Full sample code is available in the :github_repo_master:`samples-doc/scratch-event-obs`.
+Full sample code is available in the :github_repo_master:`samples-doc/scratch-event-obss3`.
 

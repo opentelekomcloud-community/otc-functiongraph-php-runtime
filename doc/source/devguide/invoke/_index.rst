@@ -9,9 +9,8 @@ PHP:
    :maxdepth: 1
    
    curl <invoke_curl>
-
-..   API calls <invoke_api>
-..   From FunctionGraph with Temporary Credentials <invoke_fg>
+   API calls <invoke_api>
+   From FunctionGraph with Temporary Credentials <invoke_fg>
 ..   From FunctionGraph with Token <invoke_fg_token>
 
 

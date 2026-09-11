@@ -1,0 +1,9 @@
+{
+  "name": "opentelekomcloud-community/invoke-fg-curl",
+  "description": "Samples on how to invoke FunctionGraph functions using AK,SK and cURL",
+  "license": "Apache-2.0",
+  "type": "project",
+  "require": {
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.2"
+  }
+}

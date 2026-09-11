@@ -1,0 +1,95 @@
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request as HttpRequest;
+use OTC\Request as OTCRequest;
+use OTC\Signer;
+
+function main(): int
+{
+  $region = getenv('OTC_SDK_REGION') ?: 'eu-de';
+  $projectId = getenv('OTC_SDK_PROJECTID');
+  $ak = getenv('OTC_SDK_AK');
+  $sk = getenv('OTC_SDK_SK');
+
+  $missing = [];
+  foreach ([
+    'OTC_SDK_PROJECTID' => $projectId,
+    'OTC_SDK_AK' => $ak,
+    'OTC_SDK_SK' => $sk,
+  ] as $name => $value) {
+    if (empty($value)) {
+      $missing[] = $name;
+    }
+  }
+
+  if ($missing) {
+    fwrite(STDERR, 'Missing required environment variables: ' . implode(', ', $missing) . PHP_EOL);
+    return 1;
+  }
+
+  $fgEndpoint = "https://functiongraph.{$region}.otc.t-systems.com";
+  $functionName = 'php-sample-invoke-function';
+  $functionVersion = 'latest';
+  $functionApp = 'default';
+
+  $functionUrn = sprintf(
+    'urn:fss:%s:%s:function:%s:%s:%s',
+    $region,
+    $projectId,
+    $functionApp,
+    $functionName,
+    $functionVersion
+  );
+
+  $invokeUri = $fgEndpoint . '/v2/' . $projectId . '/fgs/functions/' . $functionUrn . '/invocations-async';
+  echo "Invoke URI: {$invokeUri}" . PHP_EOL;
+
+  $payload = json_encode([
+    'key' => 'Hello T-Cloud Public World - ASYNC',
+  ], JSON_THROW_ON_ERROR);
+
+  $headers = [
+    'Content-Type' => 'application/json;charset=utf8',
+    'Host' => "functiongraph.{$region}.otc.t-systems.com",
+    'X-Cff-Log-Type' => 'tail',
+    'X-CFF-Request-Version' => 'v1',
+    'X-Project-Id' => $projectId,
+  ];
+
+  $request = new OTCRequest('POST', $invokeUri, $headers, $payload);
+
+  $signer = new Signer();
+  $signer->Key = $ak;
+  $signer->Secret = $sk;
+  $signer->Sign($request);
+
+  $client = new Client([
+    'verify' => false,
+  ]);
+
+  $signedHeaders = [];
+  foreach ($signer->curlHeaders($request) as $headerValue) {
+    [$headerName, $headerContent] = explode(':', $headerValue, 2);
+    $signedHeaders[trim($headerName)] = trim($headerContent);
+  }
+
+  $httpRequest = new HttpRequest('POST', $invokeUri, $signedHeaders, $payload);
+
+  try {
+    $response = $client->send($httpRequest);
+    $status = $response->getStatusCode();
+    $responseBody = json_decode((string) $response->getBody(), true, 512, JSON_THROW_ON_ERROR);
+
+    echo 'Status: ' . $status . PHP_EOL;
+    echo 'Response Body: ' . json_encode($responseBody, JSON_THROW_ON_ERROR) . PHP_EOL;
+    return 0;
+  } catch (Throwable $exception) {
+    fwrite(STDERR, 'Error: ' . $exception->getMessage() . PHP_EOL);
+    return 1;
+  }
+}
+
+exit(main());

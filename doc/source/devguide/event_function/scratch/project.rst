@@ -17,14 +17,14 @@ A minimal PHP FunctionGraph project is typically structured as follows:
   :caption: Project structure
 
   /project-root
-   ├─ dependencies      # PHP third-party dependencies (optional), created by composer
+   ├─ dependencies      # PHP third-party dependencies (optional), created by composer (vendor directory)
    ├─ src
    |  └─ index.php
    ├─ composer.json
    └─ Makefile
 
 .. note::
-  The **dependencies** directory is where Composer will install third-party PHP packages
+  The **dependencies** directory is where composer will install third-party PHP packages
   for the project.
   Normally this directory is named **vendor** by default, but in this project,
   it is named **dependencies** as specified in the **composer.json** file.
@@ -166,7 +166,6 @@ The execution result consists of the function output, summary, and log output.
       - The defined function output information is returned.
       - A JSON file that contains **errorMessage** and **errorType** is returned.
         The format is as follows:
-
 
         .. code-block:: json
 

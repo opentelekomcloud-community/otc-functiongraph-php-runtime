@@ -1,0 +1,60 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "bb895cecb4ffb75a6cc9b41ca505046e",
+    "packages": [
+        {
+            "name": "opentelekomcloud-community/otc-api-sign-sdk-php",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php.git",
+                "reference": "5c0bdc67b9a2f88f12b950409e0eb86b87cf2231"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opentelekomcloud-community/otc-api-sign-sdk-php/zipball/5c0bdc67b9a2f88f12b950409e0eb86b87cf2231",
+                "reference": "5c0bdc67b9a2f88f12b950409e0eb86b87cf2231",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OTC\\": "otc_api_sign_core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "T Cloud Public - Community",
+                    "homepage": "https://community.open-telekom-cloud.com/"
+                }
+            ],
+            "description": "T Cloud Public API Sign SDK for PHP",
+            "homepage": "https://opentelekomcloud-community.github.io/otc-api-sign-sdk-php",
+            "support": {
+                "issues": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php/issues",
+                "source": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php/tree/1.0.2"
+            },
+            "time": "2026-07-29T06:44:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}

@@ -142,9 +142,10 @@ Then, you can import the Timer Event class in your code:
 
 .. code-block:: php
 
-  require_once __DIR__ . '/../vendor/autoload.php';
+   <?php
+   require_once __DIR__ . '/../vendor/autoload.php';
 
-  use fg_events\fg_timer_event\TimerEvent;
+   use fg_events\fg_timer_event\TimerEvent;
 
   
   
