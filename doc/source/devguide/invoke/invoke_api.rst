@@ -46,18 +46,41 @@ in FunctionGraph API reference for more details about synchronous invocation.
   
     .. tab:: Code using PHP "Guzzle"
 
-      .. literalinclude:: ../../../../samples-doc/invoke-fg/src/invokeSync_AKSK.php
+      .. literalinclude:: ../../../../samples-doc/invoke-fg/guzzle/src/invokeSync_AKSK.php
         :language: php
-        :caption: :github_repo_master:`samples-doc/invoke-fg/src/invokeSync_AKSK.php <samples-doc/invoke-fg/src/invokeSync_AKSK.php>`
+        :caption: :github_repo_master:`samples-doc/invoke-fg/guzzle/src/invokeSync_AKSK.php <samples-doc/invoke-fg/guzzle/src/invokeSync_AKSK.php>`
         :tab-width: 2
 
+      .. literalinclude:: ../../../../samples-doc/invoke-fg/guzzle/composer.json
+        :language: php
+        :caption: :github_repo_master:`samples-doc/invoke-fg/guzzle/composer.json <samples-doc/invoke-fg/guzzle/composer.json>`
+        :tab-width: 2  
+
       To execute the sample code, run the following command in the terminal
-      in folder ``samples-doc/invoke-fg``:
+      in folder ``samples-doc/invoke-fg/guzzle``:
 
       .. code-block:: bash
 
         php src/invokeSync_AKSK.php
 
+    .. tab:: Code using PHP "curl"
+
+      .. literalinclude:: ../../../../samples-doc/invoke-fg/curl/src/invokeSync_AKSK.php
+        :language: php
+        :caption: :github_repo_master:`samples-doc/invoke-fg/curl/src/invokeSync_AKSK.php <samples-doc/invoke-fg/curl/src/invokeSync_AKSK.php>`
+        :tab-width: 2
+
+      .. literalinclude:: ../../../../samples-doc/invoke-fg/curl/composer.json
+        :language: php
+        :caption: :github_repo_master:`samples-doc/invoke-fg/curl/composer.json <samples-doc/invoke-fg/curl/composer.json>`
+        :tab-width: 2   
+
+      To execute the sample code, run the following command in the terminal
+      in folder ``samples-doc/invoke-fg/curl``:
+
+      .. code-block:: bash
+
+        php src/invokeSync_AKSK.php
 
     You should see an output similar to the following in the terminal:
 
@@ -84,18 +107,41 @@ in FunctionGraph API reference for more details about asynchronous invocation.
   
     .. tab:: Code using PHP "Guzzle"
 
-      .. literalinclude:: ../../../../samples-doc/invoke-fg/src/invokeASync_AKSK.php
+      .. literalinclude:: ../../../../samples-doc/invoke-fg/guzzle/src/invokeASync_AKSK.php
         :language: php
-        :caption: :github_repo_master:`samples-doc/invoke-fg/src/invokeASync_AKSK.php <samples-doc/invoke-fg/src/invokeASync_AKSK.php>`
+        :caption: :github_repo_master:`samples-doc/invoke-fg/guzzle/src/invokeASync_AKSK.php <samples-doc/invoke-fg/guzzle/src/invokeASync_AKSK.php>`
         :tab-width: 2
 
+      .. literalinclude:: ../../../../samples-doc/invoke-fg/guzzle/composer.json
+        :language: php
+        :caption: :github_repo_master:`samples-doc/invoke-fg/guzzle/composer.json <samples-doc/invoke-fg/guzzle/composer.json>`
+        :tab-width: 2   
+
       To execute the sample code, run the following command in the terminal
-      in folder ``samples-doc/invoke-fg``:
+      in folder ``samples-doc/invoke-fg/guzzle``:
 
       .. code-block:: bash
 
         php src/invokeASync_AKSK.php
 
+    .. tab:: Code using PHP "curl"
+
+      .. literalinclude:: ../../../../samples-doc/invoke-fg/curl/src/invokeASync_AKSK.php
+        :language: php
+        :caption: :github_repo_master:`samples-doc/invoke-fg/curl/src/invokeASync_AKSK.php <samples-doc/invoke-fg/curl/src/invokeASync_AKSK.php>`
+        :tab-width: 2
+
+      .. literalinclude:: ../../../../samples-doc/invoke-fg/curl/composer.json
+        :language: php
+        :caption: :github_repo_master:`samples-doc/invoke-fg/curl/composer.json <samples-doc/invoke-fg/curl/composer.json>`
+        :tab-width: 2   
+
+      To execute the sample code, run the following command in the terminal
+      in folder ``samples-doc/invoke-fg/curl``:
+
+      .. code-block:: bash
+
+        php src/invokeASync_AKSK.php
 
 In both cases, you should see an output similar to the following in the terminal:
 

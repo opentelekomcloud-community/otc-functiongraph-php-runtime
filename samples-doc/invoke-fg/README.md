@@ -24,24 +24,3 @@ Deploy following FunctionGraph function using console:
 * **Version**: ``latest``
 * **Application**: ``default``
 * **Code:** see: [src-fg/index.py](./src-fg/index.php)
-
-## Synchronous invocation
-
-### Using PHP Guzzle
-
-**code:** [src/invokeSync_AKSK.php](./src/invokeSync_AKSK.php)
-
-```bash
-php invokeSync_AKSK.php
-```
-
-
-## ASynchronous invocation
-
-### Using PHP Guzzle
-
-**code:** [src/invokeASync_AKSK.php](./src/invokeASync_AKSK.php)
-
-```bash
-php invokeASync_AKSK.php
-```
