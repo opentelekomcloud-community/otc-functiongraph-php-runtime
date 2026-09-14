@@ -1,4 +1,4 @@
-Invoke FunctionGraph Function from FunctionGraph using Temporary Credentials
+Invoke FunctionGraph Function from FunctionGraph using temporary AK/SK
 =============================================================================
 
 .. toctree::
@@ -109,44 +109,44 @@ Coding
 
       Create a function with following content to call another FunctionGraph function:
 
-      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/guzzle/src/index.php
+      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/guzzle_AKSK/src/index.php
         :language: php
-        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/guzzle/src/index.php <samples-doc/invoke-fg2fg/guzzle/src/index.php>`
+        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/guzzle_AKSK/src/index.php <samples-doc/invoke-fg2fg/guzzle_AKSK/src/index.php>`
         :tab-width: 2
 
       Create a composer.json file with following content:  
 
-      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/guzzle/composer.json
+      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/guzzle_AKSK/composer.json
         :language: json
-        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/guzzle/composer.json <samples-doc/invoke-fg2fg/guzzle/composer.json>`
+        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/guzzle_AKSK/composer.json <samples-doc/invoke-fg2fg/guzzle_AKSK/composer.json>`
 
       Create a makefile with following content:
 
-      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/guzzle/Makefile
+      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/guzzle_AKSK/Makefile
         :language: make
-        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/guzzle/Makefile <samples-doc/invoke-fg2fg/guzzle/Makefile>`
+        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/guzzle_AKSK/Makefile <samples-doc/invoke-fg2fg/guzzle_AKSK/Makefile>`
         :tab-width: 2
 
     .. tab:: Code using PHP "cURL"
 
       Create a function with following content to call another FunctionGraph function:
 
-      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/curl/src/index.php
+      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/curl_AKSK/src/index.php
         :language: php
-        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/curl/src/index.php <samples-doc/invoke-fg2fg/curl/src/index.php>`
+        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/curl_AKSK/src/index.php <samples-doc/invoke-fg2fg/curl_AKSK/src/index.php>`
         :tab-width: 2
 
       Create a composer.json file with following content:
 
-      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/curl/composer.json
+      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/curl_AKSK/composer.json
         :language: json
-        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/curl/composer.json <samples-doc/invoke-fg2fg/curl/composer.json>`  
+        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/curl_AKSK/composer.json <samples-doc/invoke-fg2fg/curl_AKSK/composer.json>`  
 
       Create a makefile with following content:
 
-      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/curl/Makefile
+      .. literalinclude:: ../../../../samples-doc/invoke-fg2fg/curl_AKSK/Makefile
         :language: make
-        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/curl/Makefile <samples-doc/invoke-fg2fg/curl/Makefile>`
+        :caption: :github_repo_master:`samples-doc/invoke-fg2fg/curl_AKSK/Makefile <samples-doc/invoke-fg2fg/curl_AKSK/Makefile>`
         :tab-width: 2
 
 Deployment

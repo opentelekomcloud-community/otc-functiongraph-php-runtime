@@ -1,5 +1,5 @@
 {
-  "name": "opentelekomcloud-community/invoke-fg2fg-guzzle",
+  "name": "opentelekomcloud-community/invoke-fg2fg-guzzle_AKSK",
   "description": "Samples on how to invoke FunctionGraph from FunctionGraph functions using AK,SK and Guzzle",
   "license": "Apache-2.0",
   "type": "project",

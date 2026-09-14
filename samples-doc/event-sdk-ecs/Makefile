@@ -15,8 +15,12 @@ IAC_TOOL := terraform
 # create a zip package of the function code for deployment
 # based on composer.json archive settings
 create_package:
-	composer update
+	# install production dependencies without development dependencies
+	composer install --no-dev --prefer-dist
+	# create a code.zip archive of the production dependencies
 	composer archive --format=zip --file=code
+	# reinstall all dependencies including development dependencies
+	composer install
 
 tf_init:
 	$(IAC_TOOL) -chdir=terraform \

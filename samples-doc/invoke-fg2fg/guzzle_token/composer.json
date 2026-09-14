@@ -1,0 +1,18 @@
+{
+  "name": "opentelekomcloud-community/invoke-fg2fg-guzzle_token",
+  "description": "Samples on how to invoke FunctionGraph from FunctionGraph functions using Token and Guzzle",
+  "license": "Apache-2.0",
+  "type": "project",
+  "require": {
+    "guzzlehttp/guzzle": "^7.0"
+  },
+   "archive": {
+    "exclude": [
+      "Makefile"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "optimize-autoloader": true
+  }
+}

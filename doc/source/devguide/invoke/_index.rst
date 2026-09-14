@@ -10,8 +10,8 @@ PHP:
    
    curl <invoke_curl>
    API calls <invoke_api>
-   From FunctionGraph with Temporary Credentials <invoke_fg>
-..   From FunctionGraph with Token <invoke_fg_token>
+   From FunctionGraph with temporary AK/SK <invoke_fg_aksk>
+   From FunctionGraph with Token <invoke_fg_token>
 
 
 For details on function invocation, see 

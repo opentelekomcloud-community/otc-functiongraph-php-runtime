@@ -1,0 +1,17 @@
+{
+  "name": "opentelekomcloud-community/invoke-fg2fg-curl_token",
+  "description": "Samples on how to invoke FunctionGraph from FunctionGraph functions using AK,SK and cURL",
+  "license": "Apache-2.0",
+  "type": "project",
+  "require": {    
+  },
+   "archive": {
+    "exclude": [
+      "Makefile"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "optimize-autoloader": true
+  }
+}

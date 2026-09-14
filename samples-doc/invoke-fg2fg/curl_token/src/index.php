@@ -1,12 +1,9 @@
 <?php
 
-// Sample code to invoke a FunctionGraph function from another FunctionGraph function using AK/SK.
+// Sample code to invoke a FunctionGraph function from another FunctionGraph function 
+// using "Token" from an agency and send it to the target FunctionGraph function 
+// defined as CALL_FG_URN in the user data.
 // This example uses native PHP cURL for the HTTP request.
-
-require __DIR__ . '/../vendor/autoload.php';
-
-use OTC\Request as OTCRequest;
-use OTC\Signer;
 
 function handler($event, $context)
 {
@@ -16,9 +13,7 @@ function handler($event, $context)
   $callFgUrn = $context->getUserData('CALL_FG_URN');
   $logger->info('Starting invocation of FunctionGraph function: ' . $callFgUrn);
 
-  $ak = $context->getSecurityAccessKey();
-  $sk = $context->getSecuritySecretKey();
-  $token = $context->getSecurityToken();
+  $token = $context->getToken();
 
   // get region from the function URN, default to 'eu-de' if not available
   $region = $callFgUrn ? explode(':', $callFgUrn)[2] : 'eu-de';
@@ -35,17 +30,8 @@ function handler($event, $context)
 
   $headers = [
     'Content-Type' => 'application/json;charset=utf8',
-    'Host' => "functiongraph.{$region}.otc.t-systems.com",
-    'X-Project-Id' => $projectId,
+    'X-Auth-Token' => $token,
   ];
-
-  $request = new OTCRequest('POST', $invokeUri, $headers, $payload);
-
-  $signer = new Signer();
-  $signer->Key = $ak;
-  $signer->Secret = $sk;
-  $signer->SecurityToken = $token;
-  $signer->Sign($request);
 
   $curlHandle = null;
 
@@ -57,7 +43,13 @@ function handler($event, $context)
 
     curl_setopt_array($curlHandle, [
       CURLOPT_CUSTOMREQUEST => 'POST',
-      CURLOPT_HTTPHEADER => $signer->curlHeaders($request),
+      CURLOPT_HTTPHEADER => array_map(
+        function ($key, $value) {
+          return $key . ': ' . $value;
+        },
+        array_keys($headers),
+        $headers
+      ),
       CURLOPT_POSTFIELDS => $payload,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_SSL_VERIFYPEER => false,
