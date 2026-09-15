@@ -21,3 +21,8 @@ variable "ECS_INSTANCE_ID" {
   type = string
   default = "set in variables.tfvars"
 }
+
+variable "ECS_ENDPOINT" {
+  type = string
+  default = "set in variables.tfvars"
+}

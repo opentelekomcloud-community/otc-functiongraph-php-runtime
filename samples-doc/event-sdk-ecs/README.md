@@ -1,6 +1,6 @@
 # event-sdk-ecs
 
-Sample FunctionGraph timer event function to start or stop an ECS instance via the ECS API.
+Sample FunctionGraph timer event function to start or stop an ECS instance via the ECS API and PHP curl.
 
 Two variants are provided:
 
@@ -30,8 +30,7 @@ The following variables must be set in `terraform/variables.tfvars`:
 | Variable | Description |
 |----------|-------------|
 | `ECS_INSTANCE_ID` | ID of the ECS instance to start/stop |
-
-The ECS endpoint defaults to `ecs.eu-de.otc.t-systems.com` and can be overridden via the `ECS_ENDPOINT` user data variable.
+| `ECS_ENDPOINT`    | The ECS endpoint, defaults to `ecs.eu-de.otc.t-systems.com` |
 
 ## Deploy
 
@@ -58,8 +57,3 @@ Example start event (`resources/event_start.json`):
     "user_event": "start"
 }
 ```
-
-## Dependencies
-
-- [`opentelekomcloud-community/otc-functiongraph-php-runtime`](https://github.com/opentelekomcloud-community/otc-functiongraph-php-runtime)
-- [`opentelekomcloud-community/otc-api-sign-sdk-php`](https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php)

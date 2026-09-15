@@ -13,12 +13,12 @@ function handler($event, $context)
   $sk = $context->getSecuritySecretKey();
   $st = $context->getSecurityToken();
 
-  $endpoint = getenv('OBS_ENDPOINT_URL') ?: "obs.eu-de.otc.t-systems.com";
+  $endpoint = getenv('OBS_ENDPOINT_URL') ?: "https://obs.eu-de.otc.t-systems.com";
 
   $obsClient = ObsClient::factory([
     'key' => $ak,
     'secret' => $sk,
-    'endpoint' => "https://$endpoint",
+    'endpoint' => $endpoint,
     'security_token' => $st,
     'socket_timeout' => 30,
     'connect_timeout' => 10

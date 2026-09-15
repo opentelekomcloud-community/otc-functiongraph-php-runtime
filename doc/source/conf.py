@@ -31,6 +31,7 @@ extensions = [
      'sphinx_substitution_extensions',
      'sphinx.ext.extlinks',
      "sphinx.ext.githubpages",
+     "myst_parser",
 
 ]
 
@@ -259,6 +260,17 @@ extlinks= {
 role_name = 'github_repo_master'
 
 extlinks_detect_hardcoded_links = True
+
+myst_url_schemes = {
+    "http": None,
+    "https": None,
+    "github": "https://github.com/opentelekomcloud-community/otc-functiongraph-php-runtime/tree/"+local_branch+"/{{path}}#{{fragment}}",
+    "gh-issue": {
+        "url": "https://github.com/opentelekomcloud-community/otc-functiongraph-php-runtime/issue/{{path}}#{{fragment}}",
+        "title": "Issue #{{path}}",
+        "classes": ["github"],
+    },
+}
 
 # Copybutton and otc theme button are not compatible. 
 # to, use custom selector:

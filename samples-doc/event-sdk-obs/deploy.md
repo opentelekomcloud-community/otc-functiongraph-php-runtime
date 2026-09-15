@@ -12,4 +12,4 @@
 
   | Variable     | Value                                  
   | ------------ | ---------------------------------------
-  | OBS_ENDPOINT | (default: obs.eu-de.otc.t-systems.com )
+  | OBS_ENDPOINT_URL | (default: https://obs.eu-de.otc.t-systems.com )

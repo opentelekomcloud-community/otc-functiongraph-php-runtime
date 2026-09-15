@@ -7,7 +7,7 @@ Invoke FunctionGraph Function from FunctionGraph using Token
 
 
 This page demonstrates how to call a FunctionGraph implemented
-in Python from another FunctionGraph function using API calls and
+in PHP from another FunctionGraph function using API calls and
 **token** provided by an agency of `Agency Type` **Cloud Service** 
 for `Cloud Service` **FunctionGraph Service** with permission to invoke FunctionGraph.
 for authentication.

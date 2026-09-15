@@ -22,7 +22,7 @@ resource "opentelekomcloud_fgs_function_v2" "MyFunction_token" {
   # set environment variables
   user_data = jsonencode({
     "ECS_INSTANCE_ID" : var.ECS_INSTANCE_ID,
-    "ECS_ENDPOINT" : "ecs.eu-de.otc.t-systems.com"
+    "ECS_ENDPOINT" : var.ECS_ENDPOINT
   })
 
   tags = {
