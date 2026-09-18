@@ -58,7 +58,9 @@ Flight::group('', function () {
 
     Flight::json([
       'hello' => $name,
-      'AK' => $ak
+      'AK' => $ak,
+      'USER_DATA_ENVVAR_1' => (string) getenv("USER_DATA_ENVVAR_1"),
+      'SECRET_ENVVAR_1' => (string) getenv("SECRET_ENVVAR_1")
     ]);
 
   })->setAlias('json');
