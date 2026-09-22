@@ -1,14 +1,27 @@
 <?php
 
-// if installed with composer
-require '../vendor/autoload.php';
-// or if installed manually by zip file
-// require 'flight/Flight.php';
+require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/loggingmiddleware.php';
 
 
+// Function to retrieve FunctionGraph environment variable values
+// from the RUNTIME_USERDATA environment variable.
+// $name is the key of the FunctionGraph environment variable to retrieve.
+function getUserData($name) {
+  $userdata = getenv('RUNTIME_USERDATA');
+  if ($userdata === false) {
+    return null;
+  }
+  $runtime_userdata = json_decode($userdata, true);
+  return $runtime_userdata[$name] ?? null;
+}
+
 Flight::group('', function () {
 
+  // root handler
+  Flight::route('/', function () {
+    echo 'Hello World of FunctionGraph - this is a sample application using FlightPHP!';
+  });
 
   //  Deliver favicon.ico with 204 No Content to avoid unnecessary 404 errors in logs.
   Flight::route('/favicon.ico', function () {
@@ -45,13 +58,15 @@ Flight::group('', function () {
 
     $ak = Flight::get('cffAccessKey');
 
-    $logger->debug('DEBUG');
-    $logger->info('INFO');
-    $logger->error('ERROR');
+    $logger->debug('sample on how to use DEBUG logging');
+    $logger->info('sample on how to use INFO logging');
+    $logger->error('sample on how to use ERROR logging');
 
     Flight::json([
       'hello' => 'world',
-      'AK' => $ak
+      'AK' => $ak,
+      'MY_USER_DATA' => getUserData('MY_USER_DATA'),
+      'MY_ENCRYPTED_USER_DATA' => getUserData('MY_ENCRYPTED_USER_DATA'),
     ]);
 
   })->setAlias('json');

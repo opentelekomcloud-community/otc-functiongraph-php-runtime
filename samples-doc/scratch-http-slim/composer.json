@@ -1,0 +1,20 @@
+{
+  "name": "opentelekomcloud-community/scratch-http-slim",
+  "type": "project",
+  "description": "Slim Framework HTTP function sample for OpenTelekomCloud FunctionGraph",
+  "license": "Apache-2.0",
+  "require": {
+    "slim/psr7": "^1.7",
+    "slim/slim": "^4.15"
+  },
+  "archive": {
+    "exclude": [
+      "Makefile",
+      "terraform",
+      "resources"
+    ]
+  },
+  "config": {
+    "archive-format": "zip"
+  }
+}

@@ -17,7 +17,8 @@ resource "opentelekomcloud_fgs_function_v2" "MyFunction" {
   description      = var.description
   memory_size      = 128
   timeout          = 30
-  max_instance_num = 1
+  max_instance_num = 20
+  enable_dynamic_memory = true
 
   # if you need security access key, security secret key and security token
   # to access other OTC services, set enable_auth_in_header to true
@@ -32,7 +33,12 @@ resource "opentelekomcloud_fgs_function_v2" "MyFunction" {
   # set some environment variables
   user_data = jsonencode({
     "RUNTIME_LOG_LEVEL" : "DEBUG",
-    "REGION" : split("_", var.OTC_SDK_PROJECTNAME)[0]
+    "REGION" : split("_", var.OTC_SDK_PROJECTNAME)[0],
+    "MY_USER_DATA": "my user data"
+  })
+
+  encrypted_user_data = jsonencode({
+    "MY_ENCRYPTED_USER_DATA": "my encrypted user data"
   })
 
   tags = {

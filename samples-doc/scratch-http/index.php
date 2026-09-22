@@ -4,7 +4,11 @@
 // from the RUNTIME_USERDATA environment variable.
 // $name is the key of the FunctionGraph environment variable to retrieve.
 function getUserData($name) {
-  $runtime_userdata = json_decode(getenv('RUNTIME_USERDATA'), true);
+  $userdata = getenv('RUNTIME_USERDATA');
+  if ($userdata === false) {
+    return null;
+  }
+  $runtime_userdata = json_decode($userdata, true);
   return $runtime_userdata[$name] ?? null;
 }
 
