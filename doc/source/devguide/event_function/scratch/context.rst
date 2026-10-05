@@ -21,7 +21,7 @@ Context interface
     * - getRequestID()
       - Obtains a request ID.
 
-    * - getRemainingTimeInMilliSeconds ()
+    * - getRemainingTimeInMilliSeconds()
       - Obtains the remaining time in milliseconds.
 
     * - getAccessKey()

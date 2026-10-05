@@ -10,7 +10,7 @@ This page demonstrates how to call a FunctionGraph implemented
 in PHP from another FunctionGraph function using API calls and
 **temporary security credentials** (SecurityAccessKey/SecurityKey/SecurityToken)
 provided by an agency of `Agency Type` **Cloud Service** 
-for `Cloud Service` **FunctionGraph Service** with permission to invoke FunctionGraph.
+for `Cloud Service` **FunctionGraph Service** with permission to invoke FunctionGraph
 for authentication.
 
 Using temporary credentials the request has to be signed using the

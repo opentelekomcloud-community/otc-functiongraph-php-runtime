@@ -175,7 +175,7 @@ Test the image either using **curl** or the Makefile target **test_local**:
 
       .. code-block:: shell
 
-         curl -X GET  localhost:8000/search?name=John
+         curl -X GET localhost:8000/search?name=John
 
   .. tab:: using Makefile target "test_local"
       Run the following command in a new terminal to test the image:
@@ -218,7 +218,7 @@ To upload the container image to SWR, following values are needed:
      - Description
    * - OTC_SDK_PROJECTNAME
      - | Your project name.
-       | To obtain this, see: :api_usage:`Obtaining a Project ID<guidelines/calling_apis/obtaining_required_information.html>`
+       | To obtain this, see: :api_usage:`Obtaining a Project ID<guidelines/calling_apis/obtaining_required_information.html#obtaining-a-project-id>`
          in API usage guide but use the **project name** instead of the project ID.
    * - OTC_SDK_AK
      - Your Access Key
@@ -427,7 +427,7 @@ For **post_json** test event the output should be:
     "body": "eyJoZWxsbyI6IlQgQ2xvdWQgUHVibGljIiwiQUsiOiJubyBhZ2VuY3kvaW5jbHVkZSBrZXlzIn0=",
     "headers": {
         "Content-Length": [
-            "56"
+            "101"
         ],
         "Content-Type": [
             "application/json"
@@ -453,4 +453,4 @@ After decoding, you will get the string:
 
 .. code-block:: json
 
-  {"hello":"T Cloud Public","AK":"no agency/include keys"}
+  {"hello":"T Cloud Public","AK":"no agency/include keys","USER_DATA_ENVVAR_1":"","SECRET_ENVVAR_1":""}
