@@ -124,7 +124,7 @@ Create FunctionGraph function in console
 7. Modify the initializer (if needed):
 
    1. Click **Configuration** > **Lifecycle**.
-   2. enable **Initialization**
+   2. Enable **Initialization**
    3. In the **Function Initializer** field, enter the
       initializer **src/index.initializer**.
    4. Click **Save**.
@@ -143,7 +143,7 @@ Testing the function
 
 2. Click **Create** to save the test event.
 3. Click **Test** to test the function.
-4. the Execution Result window is displayed on the right.
+4. The Execution Result window is displayed on the right.
    You can check whether the function is executed successfully.
 
     .. image:: ./scratch_event_function_test.png

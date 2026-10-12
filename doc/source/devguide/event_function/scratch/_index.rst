@@ -101,7 +101,7 @@ You can access the value of **order_id** by using the following code:
 
   $order_id = $event["order_id"];  // Using bracket notation
   // or
-  $order_id = $event->order_id;    // Using dot notation
+  $order_id = $event->order_id;    // Using object notation
 
 For example:
 
@@ -111,7 +111,7 @@ For example:
     function handler($event, $context) {
       $order_id = $event["order_id"];  // Using bracket notation
       // or
-      $order_id = $event->order_id;    // Using dot notation
+      $order_id = $event->order_id;    // Using object notation
       
       $amount = $event["amount"];
       $item = $event["item"];

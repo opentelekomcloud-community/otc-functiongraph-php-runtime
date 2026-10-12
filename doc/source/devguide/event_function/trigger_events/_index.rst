@@ -77,7 +77,7 @@ invoked whenever the corresponding event is detected.
 
         For instructions on triggering and using the distributed messaging Kafka, please refer to:
 
-        - Use :ref:`Kafka triggers <devguide_event_function_trigger_events_dms4kafka>`.
+        - Using :ref:`Kafka triggers <devguide_event_function_trigger_events_dms4kafka>`.
         - Using :ref:`open-source Kafka triggers <devguide_event_function_trigger_events_kafkaopensource>`       
         
     * - Log Tank Service (LTS)
@@ -129,7 +129,7 @@ For example, to use the Timer Event trigger, you can use following composer.json
           "Makefile",
           "resources/**",
           "vendor/opentelekomcloud-community",
-          "!vendor/opentelekomcloud-community/fg_events/fg-events/fg-timer-event/src"
+          "!vendor/opentelekomcloud-community/otc-functiongraph-php-runtime/fg-events/fg-timer-event/src"
         ]
       },
       "config": {
@@ -145,7 +145,7 @@ Then, you can import the Timer Event class in your code:
    <?php
    require_once __DIR__ . '/../vendor/autoload.php';
 
-   use fg_events\fg_timer_event\TimerEvent;
+   use OTC\fg_timer_event\TimerEvent;
 
   
   

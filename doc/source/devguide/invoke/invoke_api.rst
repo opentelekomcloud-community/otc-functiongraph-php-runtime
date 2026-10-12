@@ -56,6 +56,13 @@ in FunctionGraph API reference for more details about synchronous invocation.
         :caption: :github_repo_master:`samples-doc/invoke-fg/guzzle/composer.json <samples-doc/invoke-fg/guzzle/composer.json>`
         :tab-width: 2  
 
+      To install the dependencies, run the following command in the terminal
+      in folder ``samples-doc/invoke-fg/guzzle``:
+
+      .. code-block:: bash
+
+        composer install
+      
       To execute the sample code, run the following command in the terminal
       in folder ``samples-doc/invoke-fg/guzzle``:
 
@@ -75,6 +82,13 @@ in FunctionGraph API reference for more details about synchronous invocation.
         :caption: :github_repo_master:`samples-doc/invoke-fg/curl/composer.json <samples-doc/invoke-fg/curl/composer.json>`
         :tab-width: 2   
 
+      To install the dependencies, run the following command in the terminal
+      in folder ``samples-doc/invoke-fg/curl``:
+
+      .. code-block:: bash
+
+        composer install
+      
       To execute the sample code, run the following command in the terminal
       in folder ``samples-doc/invoke-fg/curl``:
 
@@ -87,10 +101,10 @@ in FunctionGraph API reference for more details about synchronous invocation.
 .. code-block:: bash
   :caption: Sample output of synchronous invocation using AK/SK
 
-  Result:  {"statusCode":200,"headers":{"Content-Type":"application/json"},"isBase64Encoded":false,"body":"{\"key\":\"Hello World\"}"}
-  Log:  2026-03-17T10:13:22Z Start invoke request '960d089c-c812-4fe7-9997-a72f773e4bcb', version: latest
+  Status: 200
+  Result: {"statusCode":200,"headers":{"Content-Type":"application/json"},"isBase64Encoded":false,"body":"{\"key\":\"Hello T-Cloud Public World - SYNC\"}"}
+  Log: 2026-03-17T10:13:22Z Start invoke request '960d089c-c812-4fe7-9997-a72f773e4bcb', version: latest
   2026-03-17T10:13:22Z 960d089c-c812-4fe7-9997-a72f773e4bcb INFO Function name: php-sample-invoke-function
-  2026-03-17T10:13:22Z 960d089c-c812-4fe7-9997-a72f773e4bcb INFO Key value from event: Hello World
   2026-03-17T10:13:22Z Finish invoke request '960d089c-c812-4fe7-9997-a72f773e4bcb', duration: 2.049ms, billing duration: 3ms, memory used: 36.535MB, billing memory: 128MB, cpu used: 0.300U, storage used: 0.039MB
 
 
@@ -148,4 +162,5 @@ In both cases, you should see an output similar to the following in the terminal
 .. code-block:: bash
    :caption: Sample output of asynchronous invocation using AK/SK
 
-   Response:  {"request_id": "3d1a4f5a-b4e2-4429-80c8-3d82d2fe8791"}
+   Status: 202
+   Response Body: {"request_id": "3d1a4f5a-b4e2-4429-80c8-3d82d2fe8791"}

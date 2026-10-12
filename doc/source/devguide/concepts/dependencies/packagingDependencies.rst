@@ -40,5 +40,5 @@ The following uses **PHP 8.3** as an example to describe how to create a **fg_ev
 
         make create_package 
 
-6. Deploy the dependency package to FunctionGraph as described in :otc_fg_umn:`Configuring Dependency Packages <configuring_dependencies/configuring_dependency_packages.html>`
+6. Deploy the dependency package to FunctionGraph as described in :otc_fg_umn:`Configuring Dependency Packages <configuring_dependencies/configuring_dependency_packages.html>`.
 

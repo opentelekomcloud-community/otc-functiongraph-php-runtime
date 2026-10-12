@@ -27,7 +27,7 @@ Parameter description
      - Description
    * - time
      - Int
-     - (Epoch timestamp in milliseconds)
+     - Epoch timestamp in milliseconds
    * - user
      - Map
      - Information about the user who initiated this request

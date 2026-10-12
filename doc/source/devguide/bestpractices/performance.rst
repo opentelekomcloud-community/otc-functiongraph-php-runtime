@@ -87,7 +87,7 @@ Once a reserved instance is created, it will automatically load the function's c
 and the initialization entry function, and persist in the environment. Therefore, configuring a
 reserved instance for a function can avoid latency issues caused by cold starts.
 For configuration instructions on reserved instances for functions, please refer to
-Reserved Instance Management.
+:docs_otc:`Reserved Instance Management <function-graph/umn/configuring_reserved_instances.html>`.
 
 Use function initialization entry point
 ---------------------------------------------------------------

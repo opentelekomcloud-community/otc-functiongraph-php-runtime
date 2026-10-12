@@ -26,7 +26,7 @@ Install PHP
 To build and run the PHP runtime for FunctionGraph, you need to install PHP.
 The PHP version depends on the version of the PHP runtime you are using when deploying your functions.
 
-You can download PHP from the official website: `https://www.php.net/downloads.php`
+You can download PHP from `the official website <https://www.php.net/downloads.php>`_.
 
 Install an IDE
 ---------------------------------
